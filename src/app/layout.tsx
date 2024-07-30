@@ -85,9 +85,10 @@ export default function RootLayout({
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4 ring-1 ring-white/10">
                 <div className="flex h-16 shrink-0 items-center">
                   <Image
-                    alt="Your Company"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    className="h-8 w-auto"
+                    alt='Your company'
+                    width={300}
+                    height={300}
+                    src={'https://static.wixstatic.com/media/b6e5cc_f3c5a3684cee4b8792e81ae733fde50a~mv2.png/v1/fill/w_506,h_126,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3_edited.png'}
                   />
                 </div>
                 <nav className="flex flex-1 flex-col">
@@ -156,11 +157,12 @@ export default function RootLayout({
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
-              <Image
-                alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+            <Image
+                    alt='Your company'
+                    width={100}
+                    height={100}
+                    src={'https://static.wixstatic.com/media/b6e5cc_f3c5a3684cee4b8792e81ae733fde50a~mv2.png/v1/fill/w_506,h_126,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3_edited.png'}
+                  />
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -262,6 +264,8 @@ export default function RootLayout({
                   <MenuButton className="-m-1.5 flex items-center p-1.5">
                     <span className="sr-only">Open user menu</span>
                     <Image
+                      width={500}
+                      height={500}
                       alt=""
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       className="h-8 w-8 rounded-full bg-gray-50"

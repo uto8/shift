@@ -97,6 +97,8 @@ export default function Team() {
                       <div className="flex items-center">
                         <div className="h-11 w-11 flex-shrink-0">
                           <Image
+                            width={500}
+                            height={500}
                             alt=""
                             src={person.image}
                             className="h-11 w-11 rounded-full"
