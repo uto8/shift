@@ -2,9 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Provider } from "react-redux";
-import { store } from "../stores/index";
-import StoreProvider from "@/stores/StoreProvider";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +30,6 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import {Sidebar} from '@/components/navigation/Sidebar'
 
 const navigation = [
   { name: 'カレンダー', href: '/calendar', icon: CalendarIcon, current: false },
@@ -87,7 +84,7 @@ export default function RootLayout({
               {/* Sidebar component, swap this element with another sidebar if you like */}
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4 ring-1 ring-white/10">
                 <div className="flex h-16 shrink-0 items-center">
-                  <img
+                  <Image
                     alt="Your Company"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     className="h-8 w-auto"
@@ -159,7 +156,7 @@ export default function RootLayout({
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
-              <img
+              <Image
                 alt="Your Company"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 className="h-8 w-auto"
@@ -264,7 +261,7 @@ export default function RootLayout({
                 <Menu as="div" className="relative">
                   <MenuButton className="-m-1.5 flex items-center p-1.5">
                     <span className="sr-only">Open user menu</span>
-                    <img
+                    <Image
                       alt=""
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       className="h-8 w-8 rounded-full bg-gray-50"
@@ -297,7 +294,7 @@ export default function RootLayout({
           </div>
 
           <main className="py-10 bg-white min-h-screen">
-          <StoreProvider>{children}</StoreProvider>
+          {children}
           </main>
         </div>
       </div>

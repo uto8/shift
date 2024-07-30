@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 const people = [
   {
     name: '職人Aさん',
@@ -95,7 +96,11 @@ export default function Team() {
                     <td className="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
                       <div className="flex items-center">
                         <div className="h-11 w-11 flex-shrink-0">
-                          <img alt="" src={person.image} className="h-11 w-11 rounded-full" />
+                          <Image
+                            alt=""
+                            src={person.image}
+                            className="h-11 w-11 rounded-full"
+                          />
                         </div>
                         <div className="ml-4">
                           <div className="font-medium text-gray-900">{person.name}</div>
