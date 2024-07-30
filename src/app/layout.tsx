@@ -35,11 +35,10 @@ import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import {Sidebar} from '@/components/navigation/Sidebar'
 
 const navigation = [
-  { name: 'シフト管理', href: '/', icon: HomeIcon, current: true },
+  { name: 'カレンダー', href: '/calendar', icon: CalendarIcon, current: false },
   { name: 'チーム管理', href: '/teams', icon: UsersIcon, current: false },
   { name: '案件管理', href: '/projects', icon: FolderIcon, current: false },
-  { name: 'カレンダー', href: '#', icon: CalendarIcon, current: false },
-  { name: '日報管理', href: '#', icon: DocumentDuplicateIcon, current: false },
+  { name: '日報管理', href: '/documents', icon: DocumentDuplicateIcon, current: false },
 ]
 const teams = [
   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
